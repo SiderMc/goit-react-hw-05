@@ -1,0 +1,18 @@
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 10;
+    position: fixed;
+    inset: 0;
+}
+.loader__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: #fcf6f5;
+    opacity: 0.8;
+}
+.spinner {
+    z-index: 15;
+}

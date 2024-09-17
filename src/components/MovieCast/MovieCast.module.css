@@ -1,0 +1,36 @@
+.characters__info {
+}
+
+.characters__list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.characters__list_item {
+    padding: 5px;
+    flex: 0 1 calc((100% - 60px) / 4);
+    background-color: #009b4d;
+    border-radius: 10px;
+    @media screen and (min-width: 768px) {
+        flex: 0 0 calc((100% - 80px) / 5);
+    }
+    @media screen and (min-width: 1280px) {
+        flex: 0 0 calc((100% - 100px) / 6);
+    }
+}
+
+.characters__img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.characters__text {
+    font-weight: 600;
+}
+.characters__text span {
+    font-weight: 400;
+    font-style: italic;
+}

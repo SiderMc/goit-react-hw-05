@@ -1,0 +1,13 @@
+.reviews__list,
+.reviews__list_item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+}
+.reviews__text_author {
+    font-weight: 700;
+}
+.reviews__text {
+    font-style: italic;
+}

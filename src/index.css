@@ -1,0 +1,15 @@
+a {
+    text-decoration: none;
+}
+h1,
+h2,
+ul,
+p {
+    margin: 0;
+}
+ul {
+    list-style: none;
+}
+body {
+    background-color: #faf5e9;
+}

@@ -1,0 +1,29 @@
+.not__found_content {
+    width: 100%;
+    height: 100%;
+}
+.not__found_title {
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    padding-top: 20%;
+}
+.back__btn {
+    display: inline-flex;
+    gap: 3px;
+    align-items: center;
+    width: max-content;
+    background-color: #009b4d;
+    padding: 5px 25px;
+    color: #faf5e9;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 300ms linear;
+    text-decoration: underline 1px solid #faf5e9;
+    text-underline-offset: 4px;
+}
+.back__btn:hover {
+    color: #ffcc00;
+    text-decoration: underline 1px solid #ffcc00;
+    transition: all 300ms linear;
+}

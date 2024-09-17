@@ -1,0 +1,24 @@
+.header__nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.header__nav a {
+    padding: 5px 25px;
+    color: #faf5e9;
+    border-radius: 10px;
+    transition: all 300ms linear;
+    font-weight: 600;
+    text-decoration: underline 1px solid #faf5e9;
+    text-underline-offset: 4px;
+}
+.header__nav .active__nav_link {
+    background-color: #ffcc00;
+    transition: all 300ms linear;
+    text-decoration: none;
+}
+.header__nav a:is(:not(.active__nav_link)):hover {
+    color: #ffcc00;
+    text-decoration: underline 1px solid #ffcc00;
+    transition: all 300ms linear;
+}
