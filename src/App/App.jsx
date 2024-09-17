@@ -1,6 +1,6 @@
 import 'modern-normalize';
 import css from './App.module.css';
-import Navigation from './components/Navigation/Navigation';
+import Navigation from '../components/Navigation/Navigation';
 import AppRoutes from './App.routes';
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
       </header>
       <section className={css.section}>
         <div className={css.container}>
-          <AppRoutes />
+          <AppRoutes/>
         </div>
       </section>
     </div>
