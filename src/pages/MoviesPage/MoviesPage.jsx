@@ -23,6 +23,7 @@ export default function MoviesPage() {
     } else {
       searchParams.set('query', searchQuery);
       setSearchParams(searchParams);
+      event.target.reset()
     }
   };
 
@@ -48,7 +49,7 @@ export default function MoviesPage() {
       <Notify message={message} />
       <div className={css.movies}>
         <form className={css.search__movie} onSubmit={handleSubmit}>
-          <input type="text" className={css.search__input} name="movie" />
+          <input type="text" className={css.search__input} name="movie" autoComplete='off'/>
           <button type="submit" className={css.search__btn}>
             <IoSearch className={css.icon} />
           </button>
