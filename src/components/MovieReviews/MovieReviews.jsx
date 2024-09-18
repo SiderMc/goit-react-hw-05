@@ -1,19 +1,18 @@
 import { useEffect, useState } from 'react';
 import { reviewsMovies } from '../../Services/themoviedb-api';
 import css from './MovieReviews.module.css';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Loader from '../Loader/Loader';
 
 export default function MovieReviews() {
   const [reviews, setReviews] = useState([]);
   const [loader, setLoader] = useState(false);
-
-  const { state } = useLocation();
+  const {movieId}=useParams()
   useEffect(() => {
     const fetchReviews = async () => {
       try {
         setLoader(true);
-        const data = await reviewsMovies(state.movieId);
+        const data = await reviewsMovies(movieId);
         setReviews(data.results);
       } catch (err) {
         console.error(err);
@@ -23,7 +22,7 @@ export default function MovieReviews() {
     };
 
     fetchReviews();
-  }, [state]);
+  }, [movieId]);
   return (
     <>
       <Loader isVisible={loader} />

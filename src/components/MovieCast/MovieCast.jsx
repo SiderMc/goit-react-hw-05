@@ -1,20 +1,20 @@
 import { useEffect } from 'react';
 import css from './MovieCast.module.css';
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { creditsMovies } from '../../Services/themoviedb-api';
 import Loader from '../Loader/Loader';
 
 export default function MovieCast() {
   const [dataInfo, setDataInfo] = useState([]);
   const [loader, setLoader] = useState(false);
-  const { state } = useLocation();
+  const {movieId}=useParams()
 
   useEffect(() => {
     const fetchMovies = async () => {
       try {
         setLoader(true);
-        const data = await creditsMovies(state.movieId);
+        const data = await creditsMovies(movieId);
         setDataInfo(data.cast);
       } catch (err) {
         console.log(err);
@@ -24,7 +24,7 @@ export default function MovieCast() {
     };
 
     fetchMovies();
-  }, [state]);
+  }, [movieId]);
 
   return (
     <>
